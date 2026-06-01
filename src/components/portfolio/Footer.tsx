@@ -55,7 +55,7 @@ export function Footer() {
         alignItems: "center",
         height: "0vh",
       }}>
-          <div>© {new Date().getFullYear()} Pratham. Crafted with care.</div>
+          <div>© {new Date().getFullYear()} Pratham Mishra. Crafted with care.</div>
         </div>
       </div>
     </footer>
