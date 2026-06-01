@@ -8,20 +8,32 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-14">
         <div className="grid gap-10 lg:grid-cols-3">
           <div>
-            <div className="flex items-center gap-2">
-              <div className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-brand font-display font-bold text-brand-foreground">P</div>
-              <span className="font-display font-semibold">Pratham</span>
-            </div>
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
               Computer Engineering student bridging technology, data, and business strategy.
             </p>
-            <div className="mt-4 flex gap-2">
-              {[Github, Linkedin, Mail].map((Icon, i) => (
-                <a key={i} href="#" className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-card text-muted-foreground transition-colors hover:text-foreground">
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
+           <div className="mt-4 flex gap-2">
+    <a
+      href="https://github.com/Pratham-Mishra225"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-card text-muted-foreground transition-colors hover:text-foreground">
+      <Github className="h-4 w-4" />
+    </a>
+
+    <a
+      href="https://linkedin.com/in/prathammishraa"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-card text-muted-foreground transition-colors hover:text-foreground">
+      <Linkedin className="h-4 w-4" />
+    </a>
+
+    <a
+      href="mailto:prathammishra225@gmail.com"
+      className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-card text-muted-foreground transition-colors hover:text-foreground">
+      <Mail className="h-4 w-4" />
+    </a>
+  </div>
           </div>
 
           <div>
