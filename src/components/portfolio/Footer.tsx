@@ -48,9 +48,14 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row"
+        style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "0vh",
+      }}>
           <div>© {new Date().getFullYear()} Pratham. Crafted with care.</div>
-          <div>Designed & built end-to-end · No stock imagery</div>
         </div>
       </div>
     </footer>

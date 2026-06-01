@@ -3,9 +3,8 @@ import { GraduationCap, Target, Compass, BookOpen, Cloud, BarChart3, Briefcase, 
 import { Section } from "./Section";
 
 const timeline = [
-  { year: "2023 – Present", title: "B.E. Computer Engineering", place: "Engineering College", icon: GraduationCap },
-  { year: "2022 – 2023", title: "Higher Secondary, Science", place: "Topped class with distinction", icon: BookOpen },
-  { year: "2025", title: "Operations & Strategy Intern", place: "Cross-functional analyst exposure", icon: Briefcase },
+  { year: "2023 – 2024", title: "Higher Secondary, Science", place: "MGM College (88%)", icon: BookOpen },
+  { year: "2024 – Present", title: "B.E. Computer Engineering", place: "Thakur College of Engineering and Technology (9.5 CGPA)", icon: GraduationCap },
 ];
 
 const interests = [

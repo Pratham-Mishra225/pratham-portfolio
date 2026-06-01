@@ -7,9 +7,7 @@ import { AnimatedBackground } from "./AnimatedBackground";
 const ROLES = [
   "Computer Engineering Student",
   "Aspiring Analyst",
-  "Problem Solver",
   "Technology Enthusiast",
-  "Future Consultant",
 ];
 
 function CountUp({ to, suffix = "" }: { to: number; suffix?: string }) {
@@ -60,7 +58,7 @@ export function Hero() {
           </span>
 
           <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-            Hi, I'm <span className="text-gradient-brand">Pratham</span>
+            Hi, I'm <span className="text-gradient-brand">Pratham Mishra</span>
             <br />
             <span className="inline-flex h-[1.2em] items-baseline overflow-hidden text-foreground">
               <AnimatePresence mode="wait">

@@ -42,9 +42,9 @@ export function Contact() {
       <div className="grid gap-10 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <div className="space-y-3">
-            <ContactLink icon={Mail} label="Email" value="pratham@example.com" href="mailto:pratham@example.com" />
-            <ContactLink icon={Linkedin} label="LinkedIn" value="linkedin.com/in/pratham" href="#" />
-            <ContactLink icon={Github} label="GitHub" value="github.com/pratham" href="#" />
+            <ContactLink icon={Mail} label="Email" value="prathammishra225@gmail.com" href="mailto:prathammishra@gmail.com" />
+            <ContactLink icon={Linkedin} label="LinkedIn" value="prathammishraa" href="https://www.linkedin.com/in/prathammishraa/" />
+            <ContactLink icon={Github} label="GitHub" value="Pratham-Mishra225" href="https://github.com/Pratham-Mishra225" />
           </div>
           <div className="mt-8 rounded-2xl border border-border bg-card p-6">
             <div className="text-xs uppercase tracking-widest text-brand">Currently</div>
