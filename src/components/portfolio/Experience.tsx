@@ -1,46 +1,35 @@
 import { motion } from "framer-motion";
-import { Briefcase, Code2, Trophy, Rocket } from "lucide-react";
+import { Briefcase, Code2, Rocket } from "lucide-react";
 import { Section } from "./Section";
 
 const items = [
   {
-    icon: Briefcase,
-    period: "2025",
-    title: "Operations & Strategy Intern",
-    org: "Cross-functional team",
-    points: [
-      "Mapped 4 core operational processes and identified 18% efficiency gains.",
-      "Built a KPI dashboard adopted by leadership for weekly reviews.",
-    ],
-  },
-  {
     icon: Code2,
-    period: "2024 – Present",
-    title: "College Projects",
-    org: "Independent & team",
-    points: [
-      "Shipped 10+ academic and personal projects across web, data, and cloud.",
-      "Maintained a public GitHub with documented case studies.",
-    ],
+    period: "May 2026 - Present",
+    title: "Contributor",
+    org: "GirlScript Summer of Code - Part-time - Remote (Mumbai, Maharashtra, India)",
+    points: [],
   },
   {
-    icon: Trophy,
-    period: "2024",
-    title: "Hackathons",
-    org: "Inter-college finalists",
+    icon: Briefcase,
+    period: "Jan 2025 - Jun 2025",
+    title: "Management Executive",
+    org: "Axios EDIC TCET Mumbai - Full-time - On-site (TCET, Mumbai)",
     points: [
-      "Built MVPs under 36-hour constraints solving real business problems.",
-      "Pitched solutions to industry judges and earned top-10 placements.",
+      "Organized and coordinated entrepreneurship workshops, speaker sessions, and innovation challenges.",
+      "Played a key role in outreach and partnerships, increasing event participation by 30%.",
+      "Contributed content and strategy for E-Cell's promotional campaigns and social media initiatives.",
+      "Engaged with student entrepreneurs to support early-stage ideas through mentorship and networking.",
     ],
   },
   {
     icon: Rocket,
-    period: "Ongoing",
-    title: "Entrepreneurship Activities",
-    org: "Student innovation cell",
+    period: "Apr 2024 - Jun 2025",
+    title: "Founder Editor",
+    org: "The Blogest - Freelance - Mumbai, Maharashtra, India",
     points: [
-      "Validated 2 startup ideas through customer interviews and SWOT.",
-      "Drafted go-to-market and pricing strategies for prototypes.",
+      "The Blogest is my blog page about thought-provoking ideas and thoughts.",
+      "We believe in the transformative journey of the mind and soul - reflect with honesty, rise with resilience, and grow beyond boundaries.",
     ],
   },
 ];

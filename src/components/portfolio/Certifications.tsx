@@ -3,14 +3,12 @@ import { Award, ExternalLink } from "lucide-react";
 import { Section } from "./Section";
 
 const certs = [
-  { title: "Google Data Analytics", issuer: "Google", date: "2025", link: "#" },
-  { title: "AWS Cloud Practitioner", issuer: "Amazon Web Services", date: "2024", link: "#" },
-  { title: "Microsoft Power BI Analyst", issuer: "Microsoft", date: "2024", link: "#" },
-  { title: "IBM Business Analyst", issuer: "IBM", date: "2024", link: "#" },
-  { title: "Tableau Desktop Specialist", issuer: "Tableau", date: "2024", link: "#" },
-  { title: "SQL for Data Science", issuer: "UC Davis / Coursera", date: "2023", link: "#" },
-  { title: "Python for Everybody", issuer: "Coursera", date: "2023", link: "#" },
-  { title: "Design Thinking", issuer: "IDEO U", date: "2023", link: "#" },
+  { title: "Career Essentials in Business Analysis by Microsoft and LinkedIn", issuer: "Microsoft", date: "2025", link: "https://www.linkedin.com/learning/certificates/1882e6fd484e918baa7b3276ba914a465753697fb73074b7cc743addc844da6f" },
+  { title: "McKinsey.org Forward Program", issuer: "McKinsey", date: "2025", link: "https://www.credly.com/badges/c61ea0ed-fee8-4d1b-9294-e694fcb482c1" },
+  { title: "CS207: Fundamentals of Machine Learning", issuer: "Saylor", date: "2026", link: "https://learn.saylor.org/pluginfile.php/1/tool_certificate/issues/1775742890/9219432660PM.pdf" },
+  { title: "Career Essentials in Generative AI by Microsoft and LinkedIn", issuer: "Microsoft", date: "2025", link: "https://www.linkedin.com/learning/certificates/de45012f4e45454acc606123991367645237c20bccaaa4e95e38a7f852577e77" },
+  { title: "Learning AI for Business Analysis", issuer: "LinkedIn", date: "2025", link: "https://www.linkedin.com/learning/certificates/408cb473d6e5a90a6b3b63df88aed59a5738cbe871f2a803a925e0c88fea9057" },
+  { title: "Generative AI for Business Analysts", issuer: "LinkedIn", date: "2025", link: "https://www.linkedin.com/learning/certificates/325771e3ab9d366a8250ff47d50165ae0cb2dfa2e2bbcaffc4b306bb13b7ae57" },
 ];
 
 export function Certifications() {
