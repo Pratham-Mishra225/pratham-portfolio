@@ -88,16 +88,16 @@ export function Contact() {
       // with no custom Content-Type header — this bypasses the CORS preflight
       // that Google Apps Script cannot handle.
       const formData = new FormData();
-      formData.append("name",      parsed.data.name);
-      formData.append("email",     parsed.data.email);
-      formData.append("subject",   parsed.data.subject);
-      formData.append("message",   parsed.data.message);
-      formData.append("honeypot",  String(data.honeypot ?? ""));
+      formData.append("name", parsed.data.name);
+      formData.append("email", parsed.data.email);
+      formData.append("subject", parsed.data.subject);
+      formData.append("message", parsed.data.message);
+      formData.append("honeypot", String(data.honeypot ?? ""));
       formData.append("userAgent", navigator.userAgent);
 
       const res = await fetch(SCRIPT_URL, {
         method: "POST",
-        body:   formData,
+        body: formData,
         // Do NOT set Content-Type — the browser sets it automatically
         // with the correct multipart boundary for FormData.
       });
@@ -213,10 +213,10 @@ export function Contact() {
               </label>
               <span
                 className={`text-xs tabular-nums transition-colors ${msgLen > MESSAGE_MAX_CHARS * 0.9
-                    ? msgLen >= MESSAGE_MAX_CHARS
-                      ? "text-destructive"
-                      : "text-amber-500"
-                    : "text-muted-foreground"
+                  ? msgLen >= MESSAGE_MAX_CHARS
+                    ? "text-destructive"
+                    : "text-amber-500"
+                  : "text-muted-foreground"
                   }`}
               >
                 {msgLen}/{MESSAGE_MAX_CHARS}
