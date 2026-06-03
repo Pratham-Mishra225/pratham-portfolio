@@ -33,3 +33,7 @@ dist-ssr
 
 public\Pratham_Mishra_Resume.pdf
 *.pdf
+.env
+google-apps-script\code.gs
+google-apps-script\DEPLOYMENT.md    
+google-apps-script
