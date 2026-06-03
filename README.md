@@ -15,7 +15,7 @@ A high-performance, premium personal portfolio website and blog system built usi
 ### 1. Server-Side Rendered (SSR) Architecture
 * **Framework:** Powered by **TanStack Start** (file-based routing with `@tanstack/react-router`).
 * **Nitro Engine:** Uses Nitro to generate a lightweight, standard-compliant Node.js SSR handler.
-* **Vercel Serverless Ready:** Handled via custom routing in `vercel.json` for serverless function execution on Vercel.
+* **Vercel Serverless Ready:** Nitro builds Vercel Build Output API v3 (`.vercel/output/`) with auto-generated routes and serverless function wrappers—no manual `vercel.json`.
 
 ### 2. Complete Dynamic Blog System
 * **File-Based Routing:** Uses TanStack Router's dynamic routes (`src/routes/blog/$slug.tsx`).
@@ -57,8 +57,7 @@ pratham-portfolio/
 ├── .gitignore                  # Git ignore patterns (fixed for cross-platform support)
 ├── components.json             # Component configuration metadata
 ├── package.json                # Project dependencies and build scripts
-├── vercel.json                 # Routing configuration for Vercel SSR functions
-├── vite.config.ts              # Vite configurations with Lovable TanStack configuration
+├── vite.config.ts              # Vite + Nitro (vercel preset) for SSR and Vercel Build Output API
 ├── google-apps-script/
 │   ├── Code.gs                 # Google Apps Script contact form handler
 │   └── DEPLOYMENT.md           # Step-by-step Apps Script deployment guide
@@ -142,7 +141,7 @@ The portfolio uses a custom backend built on Google Sheets and Google Apps Scrip
 
 ## ☁️ Vercel Deployment
 
-This project is fully deployable to **Vercel** as an SSR application. The configuration is handled automatically via [vercel.json](file:///c:/Github_Projects/pratham-portfolio/vercel.json).
+This project deploys to **Vercel** as an SSR app. `npm run build` runs Nitro with the `vercel` preset, which writes [Vercel Build Output API v3](https://vercel.com/docs/build-output-api/v3) artifacts to `.vercel/output/` (`config.json`, `static/`, `functions/`). Do not add a `vercel.json` with manual routes—it would conflict with Nitro’s generated config.
 
 ### Vercel Dashboard Settings
 When importing this repository on the Vercel dashboard, apply the following project settings:
@@ -151,9 +150,11 @@ When importing this repository on the Vercel dashboard, apply the following proj
 |---|---|
 | **Framework Preset** | `Other` (Do **not** select Vite since this uses TanStack Start SSR) |
 | **Build Command** | `npm run build` |
-| **Output Directory** | `dist` |
+| **Output Directory** | `.vercel/output` |
 | **Install Command** | `npm install` |
 | **Node.js Version** | `20.x` |
+
+After a local build, you can sanity-check: `.vercel/output/config.json` (routes), `.vercel/output/functions/` (SSR handler), `.vercel/output/static/` (client assets).
 
 ### Environment Variables
 Under project settings, add the environment variable:
