@@ -12,20 +12,14 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
-  // Enable Nitro with the Vercel preset.
-  // This activates Vercel Build Output API v3: output goes to .vercel/output/
-  // with proper serverless function wrappers, static asset placement, and
-  // auto-generated routing config — no manual vercel.json routes needed.
+  // Nitro `vercel` preset defaults (see nitro/dist/_presets.mjs). Lovable merges `dist/server`
+  // unless these paths are set — do not set serverDir to `functions` without `__server.func`.
   nitro: {
     preset: "vercel",
     output: {
       dir: ".vercel/output",
       publicDir: ".vercel/output/static",
-      serverDir: ".vercel/output/functions",
+      serverDir: ".vercel/output/functions/__server.func",
     },
-    // Nitro vercel preset option — not in Lovable's narrowed `nitro` types yet, but forwarded at build time.
-    ...({
-      vercel: { functions: { runtime: "nodejs20.x" } },
-    } as Record<string, unknown>),
   },
 });
