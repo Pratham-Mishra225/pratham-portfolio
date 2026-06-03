@@ -63,7 +63,7 @@ const projects: Project[] = [
     tech: ["Python", "AI/ML", "NLP", "React", "TypeScript", "API Integration"],
     impact: "Enabled faster crisis identification and reduced manual monitoring effort by automating sentiment analysis and risk assessment workflows.",
     github: "https://github.com/Pratham-Mishra225/Social_Media_Crisis_Agent",
-    demo: "#",
+    demo: "https://social-media-crisis-agent.vercel.app/",
     architecture: "Data ingestion layer collects social media content through APIs, NLP models process sentiment and context, a classification engine determines crisis severity, and a dashboard presents insights and recommended actions.",
     features:[
         "Real-time sentiment analysis",
@@ -84,7 +84,7 @@ const projects: Project[] = [
     tech: ["React", "TypeScript", "Tailwind CSS", "JavaScript", "Local Storage"],
     impact: "Created a centralized workspace for prompt engineering, improving prompt discoverability and reducing time spent recreating prompts.",
     github: "https://github.com/Pratham-Mishra225/PromptVault",
-    demo: "#",
+    demo: "https://prompt-vault-225.vercel.app/",
     architecture: "Frontend-first application with client-side storage, prompt categorization system, search functionality, and responsive UI optimized for productivity workflows.",
     features: [
         "Prompt creation and management",
