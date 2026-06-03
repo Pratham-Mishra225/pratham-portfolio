@@ -31,9 +31,8 @@ dist-ssr
 *.sln
 *.sw?
 
-public\Pratham_Mishra_Resume.pdf
+public/Pratham_Mishra_Resume.pdf
 *.pdf
 .env
-google-apps-script\code.gs
-google-apps-script\DEPLOYMENT.md    
-google-apps-script
+!.env.example
+google-apps-script/
