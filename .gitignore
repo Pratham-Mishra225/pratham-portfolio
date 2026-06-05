@@ -36,4 +36,5 @@ public/Pratham_Mishra_Resume.pdf
 *.pdf
 .env
 !.env.example
-google-apps-script/
+google-apps-script/
+.tanstack

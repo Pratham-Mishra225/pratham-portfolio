@@ -1,6 +1,7 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "pratham-portfolio",
   "private": true,
+  "packageManager": "npm@latest",
   "sideEffects": false,
   "type": "module",
   "engines": {
