@@ -3,14 +3,13 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Download, Mail, Sparkles } from "lucide-react";
 import { AnimatedBackground } from "./AnimatedBackground";
+import resumePdf from "C:/Github_Projects/pratham-portfolio/src/assets/Pratham_Mishra_Resume_2026.pdf";
 
 const ROLES = [
   "Computer Engineering Student",
   "Aspiring Analyst",
   "Technology Enthusiast",
 ];
-
-const RESUME_URL = "/Pratham_Mishra_Resume.pdf";
 
 function CountUp({ to, suffix = "" }: { to: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -45,14 +44,14 @@ export function Hero() {
   }, []);
 
   const handleResumeClick = () => {
-    void fetch(RESUME_URL, { method: "HEAD" })
+    void fetch(resumePdf, { method: "HEAD" })
       .then((response) => {
         if (!response.ok) {
-          console.error(`Resume not found at ${RESUME_URL} (status ${response.status}).`);
+          console.error(`Resume not found at ${resumePdf} (status ${response.status}).`);
         }
       })
       .catch((error) => {
-        console.error(`Failed to check resume at ${RESUME_URL}.`, error);
+        console.error(`Failed to check resume at ${resumePdf}.`, error);
       });
   };
 
@@ -104,7 +103,7 @@ export function Hero() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
-              href={RESUME_URL}
+              href={resumePdf}
               onClick={handleResumeClick}
               download
               target="_blank"
