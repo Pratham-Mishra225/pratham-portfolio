@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Download, Mail, Sparkles } from "lucide-react";
 import { AnimatedBackground } from "./AnimatedBackground";
-import resumePdf from "src/assets/Pratham_Mishra_Resume_2026.pdf";
+import resumePdf from "../../assets/Pratham_Mishra_Resume_2026.pdf";
 const ROLES = [
   "Computer Engineering Student",
   "Aspiring Analyst",
