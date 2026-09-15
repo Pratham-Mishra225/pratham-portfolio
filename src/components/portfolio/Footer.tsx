@@ -1,6 +1,6 @@
 import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
 
-const nav = ["About", "Skills", "Projects", "Case Studies", "Experience", "Certifications", "Blog", "Contact"];
+const nav = ["Projects", "Skills", "Experience", "About", "Certifications", "Blog", "Contact"];
 
 export function Footer() {
   return (
@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-3">
           <div>
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
-              Computer Engineering student bridging technology, data, and business strategy.
+              Software Engineer building AI/ML systems and data-driven applications.
             </p>
            <div className="mt-4 flex gap-2">
     <a

@@ -7,7 +7,6 @@ import { Skills } from "@/components/portfolio/Skills";
 import { Tools } from "@/components/portfolio/Tools";
 import { Experience } from "@/components/portfolio/Experience";
 import { Projects } from "@/components/portfolio/Projects";
-import { CaseStudies } from "@/components/portfolio/CaseStudies";
 import { Certifications } from "@/components/portfolio/Certifications";
 import { Blogs } from "@/components/portfolio/Blogs";
 import { Contact } from "@/components/portfolio/Contact";
@@ -18,10 +17,10 @@ import { ScrollProgress } from "@/components/portfolio/ScrollProgress";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pratham — Computer Engineering Student, Analyst & Future Consultant" },
-      { name: "description", content: "Portfolio of Pratham — a Computer Engineering student bridging technology, data, and business strategy. Projects, case studies, and analytics work." },
-      { property: "og:title", content: "Pratham — Technology, Data & Strategy" },
-      { property: "og:description", content: "Premium portfolio: software projects, analytics case studies, certifications, and writing." },
+      { title: "Pratham Mishra — Software Engineer | AI/ML & Data Analytics" },
+      { name: "description", content: "Portfolio of Pratham Mishra — Software Engineer building AI/ML systems and data-driven applications. Full-stack development, machine learning, and analytics projects." },
+      { property: "og:title", content: "Pratham Mishra — Software Engineer | AI/ML & Data Analytics" },
+      { property: "og:description", content: "Software engineering, AI/ML systems, and data analytics projects." },
       { property: "og:type", content: "website" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -42,7 +41,6 @@ function Index() {
         <Tools />
         <Experience />
         <Projects />
-        <CaseStudies />
         <Certifications />
         <Blogs />
         <Contact />

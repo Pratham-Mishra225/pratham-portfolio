@@ -119,11 +119,25 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     transition: background-color 0.4s ease, color 0.4s ease;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-weight: 600;
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+
+  h3 {
+    font-weight: 600;
   }
 }
 
@@ -154,6 +168,16 @@
   }
   .mask-fade {
     mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+  }
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
   }
 }
 

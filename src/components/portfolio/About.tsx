@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Target, Compass, BookOpen, Cloud, BarChart3, Briefcase, Lightbulb } from "lucide-react";
+import { GraduationCap, Code2, Cpu, Database, BookOpen } from "lucide-react";
 import { Section } from "./Section";
 
 const timeline = [
@@ -8,40 +8,37 @@ const timeline = [
 ];
 
 const interests = [
-  { label: "Data Analytics", icon: BarChart3 },
-  { label: "Business Analysis", icon: Target },
-  { label: "Cloud Computing", icon: Cloud },
-  { label: "Technology Strategy", icon: Compass },
-  { label: "Entrepreneurship", icon: Lightbulb },
-  { label: "Consulting", icon: Briefcase },
+  { label: "Software Engineering", icon: Code2 },
+  { label: "AI/ML Systems", icon: Cpu },
+  { label: "Data Analytics", icon: Database },
 ];
 
 export function About() {
   return (
-    <Section id="about" eyebrow="About" title="Engineer's mind. Analyst's curiosity." description="I'm a Computer Engineering student fascinated by the intersection of technology and business — where elegant systems meet rigorous analysis to create measurable outcomes.">
+    <Section id="about" eyebrow="About" title="Building intelligent systems" description="I'm a Computer Engineering student focused on software engineering, AI/ML, and data analytics — turning complex problems into scalable solutions.">
       <div className="grid gap-12 lg:grid-cols-5">
         <div className="lg:col-span-3">
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              I build software, study data, and frame problems the way a consultant would — starting with the
-              question, not the tooling. My toolkit spans <span className="text-foreground">Java, Python, SQL</span>,
-              dashboarding with <span className="text-foreground">Power BI &amp; Tableau</span>, and cloud
-              fundamentals on <span className="text-foreground">AWS &amp; GCP</span>.
+              I build software systems, develop AI/ML applications, and analyze data to solve real problems. My work spans
+              <span className="text-foreground"> full-stack development with React and Node.js</span>,
+              <span className="text-foreground"> machine learning with Python and Scikit-learn</span>, and
+              <span className="text-foreground"> data analytics with SQL and visualization tools</span>.
             </p>
             <p>
-              I'm pursuing roles where I can sit at the table with engineers <em>and</em> executives — turning
-              ambiguous problems into structured analyses, prototypes, and recommendations.
+              I'm pursuing roles where I can apply software engineering fundamentals to build intelligent,
+              data-driven applications — from backend APIs and database design to ML pipelines and analytics dashboards.
             </p>
             <div className="rounded-xl border border-border bg-card p-5 shadow-elegant">
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">Mission</div>
+              <div className="text-xs uppercase tracking-wider text-muted-foreground">Focus</div>
               <p className="mt-2 font-display text-lg text-foreground">
-                "Translate complexity into clarity, and clarity into compounding business value."
+                "Build scalable software, leverage AI/ML for intelligent solutions, and use data to drive decisions."
               </p>
             </div>
           </div>
 
           <div className="mt-10">
-            <div className="mb-4 text-sm font-medium text-muted-foreground">Career interests</div>
+            <div className="mb-4 text-sm font-medium text-muted-foreground">Technical interests</div>
             <div className="flex flex-wrap gap-2">
               {interests.map((i) => (
                 <span

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, ExternalLink, X, ArrowUpRight, Layers, Zap, LineChart } from "lucide-react";
+import { Github, ExternalLink, X, ArrowUpRight, Layers, Zap, LineChart, Filter } from "lucide-react";
 import { Section } from "./Section";
 import { cn } from "@/lib/utils";
 
@@ -16,6 +16,7 @@ type Project = {
   architecture: string;
   features: string[];
   learnings: string;
+  category: "Software Engineering" | "AI/ML" | "Data/Analytics";
   span?: string;
   accent?: string;
 };
@@ -52,6 +53,7 @@ const projects: Project[] = [
       "Persistent analysis sessions"
     ],
     learnings: "Learned advanced AI system architecture, multi-agent orchestration, business strategy modeling, decision-support frameworks, and how to build enterprise-style AI applications that combine analytics with strategic recommendations.",
+    category: "AI/ML",
     span: "lg:col-span-1 lg:row-span-2",
     accent: "from-amber-500/20 to-brand/20",
   },
@@ -73,6 +75,7 @@ const projects: Project[] = [
         "AI-powered response suggestions",
         "Interactive analytics dashboard"],
     learnings: "Learned how AI agents can be applied to reputation management, explored NLP-based sentiment analysis, and designed workflows that convert large volumes of unstructured social media data into actionable business insights.",
+    category: "AI/ML",
     span: "lg:col-span-1 lg:row-span-2",
     accent: "from-brand/30 to-brand-glow/20",
   },
@@ -95,6 +98,7 @@ const projects: Project[] = [
         "Local data persistence"
       ],
     learnings: "Learned how to design productivity-focused applications, manage structured user-generated content, implement efficient search workflows, and create intuitive interfaces for AI-powered use cases.",
+    category: "Software Engineering",
     accent: "from-emerald-500/20 to-brand/20",
   },
   {
@@ -116,6 +120,7 @@ const projects: Project[] = [
       "Responsive user experience"
     ],
     learnings: "Learned how to design assessment systems, manage application state for multi-step workflows, implement scoring logic, and create engaging educational user experiences.",
+    category: "Software Engineering",
     accent: "from-blue-500/20 to-brand/20",
   },
   {
@@ -156,6 +161,7 @@ const projects: Project[] = [
       "Role-ready backend API foundation"
     ],
     learnings: "Learned full-stack application architecture, JWT-based authentication, MongoDB schema design, rich-text editor integration, state management with Zustand, API design with Express, and building scalable content-management workflows.",
+    category: "Software Engineering",
     span: "lg:col-span-2",
     accent: "from-brand-glow/20 to-brand/20",
   },
@@ -165,11 +171,33 @@ const icons = [Layers, Zap, LineChart, Layers, LineChart];
 
 export function Projects() {
   const [open, setOpen] = useState<Project | null>(null);
+  const [filter, setFilter] = useState<"All" | "Software Engineering" | "AI/ML" | "Data/Analytics">("All");
+
+  const categories: Array<"All" | "Software Engineering" | "AI/ML" | "Data/Analytics"> = ["All", "Software Engineering", "AI/ML", "Data/Analytics"];
+  const filteredProjects = filter === "All" ? projects : projects.filter(p => p.category === filter);
 
   return (
-    <Section id="projects" eyebrow="Featured projects" title="Things I've built" description="A mix of software engineering and analytics work — each starts with a real problem and ends with measurable impact.">
+    <Section id="projects" eyebrow="Featured projects" title="Things I've built" description="Software engineering, AI/ML systems, and data analytics projects — each solving real problems with measurable impact.">
+      <div className="mb-8 flex flex-wrap gap-2">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setFilter(cat)}
+            className={cn(
+              "inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-all",
+              filter === cat
+                ? "border-brand bg-brand/10 text-brand"
+                : "border-border bg-card text-muted-foreground hover:bg-accent hover:text-foreground"
+            )}
+          >
+            <Filter className="h-4 w-4" />
+            {cat}
+          </button>
+        ))}
+      </div>
+      
       <div className="grid auto-rows-[14rem] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {projects.map((p, i) => {
+        {filteredProjects.map((p, i) => {
           const Icon = icons[i % icons.length];
           return (
             <motion.button
@@ -191,7 +219,12 @@ export function Projects() {
                 <div className="grid h-10 w-10 place-items-center rounded-lg border border-border bg-card/80 text-brand backdrop-blur">
                   <Icon className="h-5 w-5" />
                 </div>
-                <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground" />
+                <div className="flex items-center gap-2">
+                  <span className="rounded-full border border-border bg-background/60 px-2 py-0.5 text-[10px] uppercase tracking-widest text-muted-foreground backdrop-blur">
+                    {p.category}
+                  </span>
+                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground" />
+                </div>
               </div>
               <div className="relative">
                 <h3 className="font-display text-xl font-semibold tracking-tight">{p.title}</h3>

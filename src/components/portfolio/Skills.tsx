@@ -1,33 +1,33 @@
 import { motion } from "framer-motion";
-import { Code2, BarChart3, Briefcase, Users } from "lucide-react";
+import { Code2, Cpu, Database, BarChart3 } from "lucide-react";
 import { Section } from "./Section";
 
 const groups = [
   {
     icon: Code2,
-    title: "Technical",
-    items: ["Java", "Python", "C++", "SQL", "HTML", "CSS", "JavaScript"],
+    title: "Languages",
+    items: ["Python", "JavaScript", "TypeScript", "SQL", "Java", "C++", "HTML", "CSS"],
+  },
+  {
+    icon: Cpu,
+    title: "Software Engineering",
+    items: ["React", "Node.js", "REST APIs", "Git", "Docker", "Testing", "System Design"],
+  },
+  {
+    icon: Database,
+    title: "AI/ML",
+    items: ["Machine Learning", "NLP", "Pandas", "NumPy", "Scikit-learn", "LLM APIs", "RAG Systems"],
   },
   {
     icon: BarChart3,
     title: "Analytics",
-    items: ["Data Analysis", "Business Analysis", "Dashboard Design", "Process Analysis", "KPI Analysis"],
-  },
-  {
-    icon: Briefcase,
-    title: "Business",
-    items: ["Strategic Thinking", "Market Research", "Problem Solving", "Presentation Skills"],
-  },
-  {
-    icon: Users,
-    title: "Soft Skills",
-    items: ["Communication", "Leadership", "Team Collaboration"],
+    items: ["Data Analysis", "Power BI", "Tableau", "Excel", "Dashboard Design", "SQL Analytics"],
   },
 ];
 
 export function Skills() {
   return (
-    <Section id="skills" eyebrow="Skills" title="A T-shaped skill profile" description="Deep technical foundations, broad analytical and business range — combined to solve problems end-to-end.">
+    <Section id="skills" eyebrow="Skills" title="Technical expertise" description="Core technologies and tools I use to build software, AI systems, and data-driven applications.">
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {groups.map((g, i) => (
           <motion.div

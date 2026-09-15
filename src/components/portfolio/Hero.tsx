@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Download, Mail, Sparkles } from "lucide-react";
+import { ArrowRight, Download, Mail, Sparkles, Github } from "lucide-react";
 import { AnimatedBackground } from "./AnimatedBackground";
 import resumePdf from "../../assets/Pratham_Mishra_Resume_2026.pdf";
 const ROLES = [
-  "Computer Engineering Student",
-  "Aspiring Analyst",
-  "Technology Enthusiast",
+  "Software Engineer",
+  "AI/ML Developer",
+  "Data Analytics Engineer",
 ];
 
 function CountUp({ to, suffix = "" }: { to: number; suffix?: string }) {
@@ -66,7 +66,7 @@ export function Hero() {
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs text-muted-foreground backdrop-blur">
             <Sparkles className="h-3 w-3 text-brand" />
-            Available for internships & analyst roles
+            Available for software engineering & AI/ML roles
           </span>
 
           <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
@@ -89,8 +89,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Bridging Technology, Data, and Business Strategy — building intelligent systems and
-            uncovering insights that move organizations forward.
+            I build scalable software systems, AI/ML applications, and data-driven solutions that solve real problems.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -100,6 +99,15 @@ export function Hero() {
             >
               View Projects
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </a>
+            <a
+              href="https://github.com/Pratham-Mishra225"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-border bg-card/60 px-5 py-3 text-sm font-medium backdrop-blur transition-colors hover:bg-accent"
+            >
+              <Github className="h-4 w-4" />
+              View GitHub
             </a>
             <a
               href={resumePdf}
@@ -117,16 +125,15 @@ export function Hero() {
               className="inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               <Mail className="h-4 w-4" />
-              Contact Me
+              Contact
             </a>
           </div>
 
-          <div className="mt-14 grid max-w-2xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-4">
+          <div className="mt-14 grid max-w-2xl grid-cols-3 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3">
             {[
               { v: 10, s: "+", l: "Projects" },
               { v: 6, s: "+", l: "Certifications" },
               { v: 6, s: "+", l: "Blogs" },
-              { v: 4, s: "+", l: "Case Studies" },
             ].map((s) => (
               <div key={s.l} className="bg-card p-5">
                 <div className="font-display text-3xl font-semibold text-gradient-brand">
