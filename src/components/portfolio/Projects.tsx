@@ -68,7 +68,7 @@ const projects: Project[] = [
     ],
     impact: "Created a production-style publishing platform that combines modern frontend engineering with scalable backend architecture, supporting both content creators and readers.",
     github: "https://github.com/Pratham-Mishra225/BlogSpace",
-    demo: "#",
+    demo: "https://blog-space225.vercel.app/",
     architecture: "React frontend built with TanStack Router, Zustand, and TipTap communicates with an Express API backed by MongoDB. JWT authentication secures user access while Mongoose models manage users, posts, drafts, likes, and follows. The system is designed to evolve from a mock-data prototype into a fully integrated production platform.",
     features: [
       "Rich-text article editor",

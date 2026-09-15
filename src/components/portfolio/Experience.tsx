@@ -12,7 +12,7 @@ const items = [
   },
   {
     icon: Code2,
-    period: "May 2025 - Jun 2025",
+    period: "Jan 2025 - Feb 2025",
     title: "Cyber Security Intern",
     org: "CyberPeace Foundation - Internship - Remote (Mumbai, Maharashtra, India)",
     points: [
