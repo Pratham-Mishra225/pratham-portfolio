@@ -3,8 +3,8 @@ import { GraduationCap, Code2, Cpu, Database, BookOpen } from "lucide-react";
 import { Section } from "./Section";
 
 const timeline = [
+  { year: "2024 – Present", title: "B.E. Computer Engineering", place: "Thakur College of Engineering and Technology (9.23 CGPA)", icon: GraduationCap },
   { year: "2023 – 2024", title: "Higher Secondary, Science", place: "MGM College (88%)", icon: BookOpen },
-  { year: "2024 – Present", title: "B.E. Computer Engineering", place: "Thakur College of Engineering and Technology (9.5 CGPA)", icon: GraduationCap },
 ];
 
 const interests = [

@@ -11,6 +11,16 @@ const items = [
     points: [],
   },
   {
+    icon: Code2,
+    period: "May 2025 - Jun 2025",
+    title: "Cyber Security Intern",
+    org: "CyberPeace Foundation - Internship - Remote (Mumbai, Maharashtra, India)",
+    points: [
+      "Researched topics including cybersecurity tools, personal cyber safety, cybercrime awareness, and AI-generated deepfakes.",
+      "Created and presented research-based PowerPoint presentations, developing skills in cybersecurity research, technical communication, and awareness.",
+    ],
+  },
+  {
     icon: Briefcase,
     period: "Jan 2025 - Jun 2025",
     title: "Management Executive",
@@ -18,7 +28,6 @@ const items = [
     points: [
       "Organized and coordinated entrepreneurship workshops, speaker sessions, and innovation challenges.",
       "Played a key role in outreach and partnerships, increasing event participation by 30%.",
-      "Contributed content and strategy for E-Cell's promotional campaigns and social media initiatives.",
       "Engaged with student entrepreneurs to support early-stage ideas through mentorship and networking.",
     ],
   },
